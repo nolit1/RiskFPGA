@@ -26,9 +26,12 @@
 #define SLT 10
 
 
+
+
 char *commandFileName; //имя файла с командами
 char *machineFileName; //имя файла инициализации
 int counter;
+
 struct singleCommand {
     int command;
     int regA;

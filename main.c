@@ -227,6 +227,7 @@ void resultDebuggerToTerminal(int step, int currentCommand, int registerA, int r
 }
 
 int main(int argv, char **argc) {
+    argv = 5;
 
     printf("Симулятор машины Risk FPGA \n");
 
@@ -279,7 +280,6 @@ int main(int argv, char **argc) {
             argB = strtok(NULL, " ");
             argC = strtok(NULL, "\n");
 
-            char *nameCommand = NULL;
             if (!strcmp(currentCommand, "0000000")) {
                 command[line].command = ADD;
                 command[line].regC = toDecForBigC(argC);
@@ -395,6 +395,7 @@ int main(int argv, char **argc) {
                     break;
                 }
             }
+            fclose(resultDebug);
         } else {
             if (!strcmp(argc[5], "3")) {
                 printf("\n\n");
@@ -425,6 +426,7 @@ int main(int argv, char **argc) {
                     }
                 }
             }
+
 
         }
 
